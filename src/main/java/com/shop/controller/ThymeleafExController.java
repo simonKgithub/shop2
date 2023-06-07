@@ -14,6 +14,11 @@ import java.util.List;
 @RequestMapping(value = "/thymeleaf")
 public class ThymeleafExController {
 
+    @GetMapping("/ex07")
+    public String thymeleafExample07(){
+        return "thymeleafEx/thymeleafEx07";
+    }
+
     @GetMapping(value = "/ex03")
     public String thymeleafExample03(Model model) {
 
