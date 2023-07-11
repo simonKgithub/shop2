@@ -18,5 +18,9 @@ public class Cart extends BaseEntity{
     @JoinColumn(name = "member_id") // 매핑할 외래키 지정
     private Member member;
 
-    //등록일, 수정일, 등록자, 수정자
+    public static Cart createCart(Member member) {
+        Cart cart = new Cart();
+        cart.setMember(member);
+        return cart;
+    }
 }
